@@ -68,4 +68,4 @@ mysql-5d56b4b848-hvm9l          1/1     Running   0          9m43s
 two-tier-app-6d6ddddffd-5pk59   1/1     Running   0          9m30s
 
 To delete first delete node groups (instance) then cluster 
-
+eksctl delete cluster --name spark-cl --region ap-south-1
