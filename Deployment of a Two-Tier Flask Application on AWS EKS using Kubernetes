@@ -66,3 +66,6 @@ ubuntu@ip-172-31-8-38:~/two-tier-flask-app/eks-manifests$ kubectl get pods
 NAME                            READY   STATUS    RESTARTS   AGE
 mysql-5d56b4b848-hvm9l          1/1     Running   0          9m43s
 two-tier-app-6d6ddddffd-5pk59   1/1     Running   0          9m30s
+
+To delete first delete node groups (instance) then cluster 
+
