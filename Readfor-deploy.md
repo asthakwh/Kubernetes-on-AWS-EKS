@@ -15,6 +15,8 @@ configure aws first to access
         AWS Secret Access Key [None]: 
         Default region name [None]: ap-south-1
         Default output format [None]:
+        
+        
 to create nodes
 
 step 1:
