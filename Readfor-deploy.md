@@ -30,24 +30,34 @@ step 1:
         curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 
         curl -LO https://dl.k8s.io/release/v1.36.0/bin/linux/amd64/kubectl
-        curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
+
+        curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64 kubectl.sha256"
+
         echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
+
         sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+
         kubectl version --client
 
 step2:
 To check is is linux x86 platform or not
-[          PLATFORM=$(uname -s)_$(uname -m)
-echo $PLATFORM        ]# run as a command
-curl -sLO "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_${PLATFORM}.tar.gz"
-tar -xzf eksctl_${PLATFORM}.tar.gz -C /tmp
-sudo install -m 0755 /tmp/eksctl /usr/local/bin
+
+        PLATFORM=$(uname -s)_$(uname -m)
+        echo $PLATFORM        ]# run as a command
+
+
+        curl -sLO "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_${PLATFORM}.tar.gz"
+        tar -xzf eksctl_${PLATFORM}.tar.gz -C /tmp
+        sudo install -m 0755 /tmp/eksctl /usr/local/bin
         eksctl version
+
 to check installation
+
         eksctl create cluster --name spark-cl --region ap-south-1 --node-type t3.small --nodes-min 2 --nodes-max 3
  
         kubectl get nodes
         git clone https://github.com/LondheShubham153/two-tier-flask-app.git
+
   Also create  cluster in was
 
         cd two-tier-flask-app/
@@ -60,6 +70,7 @@ to check installation
         kubectl get pods
         kubectl describe pods
         kubectl get svc
+        
 To Test app:
 You’ll get external ip with 
 
