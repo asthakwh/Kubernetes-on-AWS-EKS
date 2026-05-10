@@ -1,10 +1,11 @@
 Deployment of a Two-Tier Flask Application on AWS EKS using Kubernetes
+        
         sudo apt update &&  sudo apt upgrade -y
-         curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-          sudo apt install unzip
-          unzip awscliv2.zip
-         sudo ./aws/install
-         aws --version 
+        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+        sudo apt install unzip
+        unzip awscliv2.zip
+        sudo ./aws/install
+        aws --version 
 
 install aws cli unzip it and run
 configure aws first to access
