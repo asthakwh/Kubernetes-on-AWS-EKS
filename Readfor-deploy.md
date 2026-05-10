@@ -62,13 +62,16 @@ to check installation
         kubectl get svc
 To Test app:
 You’ll get external ip with 
+
         kubectl get svc
 
 Copy that link ends with (ap-south-1.elb.amazonaws.com )
 Paste on browser
+
         http://af28b908e80e549a9b8ebd2d8fdaac55-1370981855.ap-south-1.elb.amazonaws.com
 
         kubectl get pods
+
 Check Running pods
 
 ubuntu@ip-172-31-8-38:~/two-tier-flask-app/eks-manifests$ kubectl get pods
@@ -77,4 +80,5 @@ mysql-5d56b4b848-hvm9l          1/1     Running   0          9m43s
 two-tier-app-6d6ddddffd-5pk59   1/1     Running   0          9m30s
 
 To delete first delete node groups (instance) then cluster 
+
         eksctl delete cluster --name spark-cl --region ap-south-1
