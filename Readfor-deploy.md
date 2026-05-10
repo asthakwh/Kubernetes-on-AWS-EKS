@@ -10,13 +10,17 @@ Deployment of a Two-Tier Flask Application on AWS EKS using Kubernetes
 install aws cli unzip it and run
 configure aws first to access
  
-        aws configure
+         aws configure
+
         AWS Access Key ID [None]: 
+
         AWS Secret Access Key [None]: 
+
         Default region name [None]: ap-south-1
+        
         Default output format [None]:
         
-        
+
 to create nodes
 
 step 1:
